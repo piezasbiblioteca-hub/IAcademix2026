@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glosario de IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f7f2;
+      color: #1a1a1a;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+
+    .glosario {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .fila {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tarjeta {
+      background: #fff;
+      border: 1px solid #e0ddd5;
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s;
+    }
+    .tarjeta:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
+
+    .tarjeta h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #00558f;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    .etiqueta.fundamentos   { background: #ffc766; color: #5a3a00; }
+    .etiqueta.uso-academico { background: #b7d678; color: #2d4a00; }
+    .etiqueta.aprendizaje   { background: #8ee3f5; color: #004a5a; }
+    .etiqueta.datos         { background: #8ee8d9; color: #00453a; }
+    .etiqueta.etica         { background: #abbfff; color: #1a2a6e; }
+    .etiqueta.ia-generativa { background: #ffb382; color: #6e2a00; }
+    .etiqueta.modelos       { background: #b7d678; color: #2d4a00; }
+
+    .tarjeta p {
+      font-size: 0.88rem;
+      text-align: justify;
+      color: #333;
+    }
+
+    .tarjeta a {
+      color: #00558f;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .divisor {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 1.25rem 0.75rem; }
+      .fila { grid-template-columns: 1fr; gap: 1rem; }
+      .tarjeta h2 { font-size: 0.98rem; }
+      .tarjeta p  { font-size: 0.85rem; text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1rem 0.5rem; }
+      .tarjeta { padding: 1.1rem; }
+      .tarjeta h2 { font-size: 0.93rem; }
+      .etiqueta { font-size: 0.68rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="glosario">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Agente de IA (Agentic AI)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Sistema de IA diseñado para actuar de forma autónoma: percibe su entorno, toma decisiones y ejecuta acciones para alcanzar objetivos específicos, a menudo en secuencias de varios pasos sin supervisión humana continua.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Alfabetización en IA (AI Literacy)</h2>
+      <span class="etiqueta uso-academico">Uso académico</span>
+      <p>Capacidad de comprender, evaluar y usar de forma efectiva las herramientas y tecnologías de inteligencia artificial. Incluye conocimiento de conceptos, algoritmos, privacidad de datos, ética e implicaciones sociales de la IA.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Algoritmo</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Conjunto de instrucciones claras y no ambiguas que describe cómo resolver una clase de problemas en un número finito de pasos. En IA, los algoritmos son la base del entrenamiento de modelos de aprendizaje automático.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Aprendizaje automático (Machine Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Subcampo de la IA que permite a los sistemas aprender y mejorar a partir de datos sin ser programados explícitamente para cada tarea. Los modelos detectan patrones y toman decisiones basadas en datos de entrenamiento.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Aprendizaje profundo (Deep Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Técnica de aprendizaje automático basada en redes neuronales con múltiples capas que aprende de grandes volúmenes de datos no estructurados como imágenes, texto o audio. Es la base del reconocimiento facial y la traducción automática.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Aprendizaje por refuerzo (Reinforcement Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Tipo de aprendizaje automático donde un agente aprende mediante ensayo y error, recibiendo recompensas o penalizaciones según sus acciones. Es clave en el desarrollo de sistemas como AlphaGo o los motores de juego.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Aprendizaje supervisado (Supervised Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Enfoque de aprendizaje automático en que el modelo se entrena con datos etiquetados (con respuesta correcta conocida), aprendiendo a predecir resultados para nuevas entradas.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Aprendizaje no supervisado (Unsupervised Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Modalidad de aprendizaje automático donde el modelo trabaja con datos sin etiquetar, descubriendo patrones y estructuras ocultas de forma autónoma.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Aprendizaje multimodal (Multi-Modal Learning)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Subcampo que permite a los modelos procesar y relacionar simultáneamente distintos tipos de datos como texto, imágenes y audio. Ejemplo: modelos como GPT-4o que leen imágenes y responden preguntas sobre ellas.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>API (Application Programming Interface)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Conjunto de reglas y protocolos que permite que diferentes aplicaciones se comuniquen entre sí. En el contexto de IA, las APIs permiten integrar modelos y servicios de inteligencia artificial en otras aplicaciones.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Autoría académica e IA</h2>
+      <span class="etiqueta uso-academico">Uso académico</span>
+      <p>Cuestión ética que surge cuando se usa IA generativa en la producción de trabajos académicos. Implica definir qué constituye contribución intelectual propia y cómo declarar el uso de herramientas de IA.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Big Data</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Conjuntos de datos de gran volumen, variedad y velocidad que requieren herramientas especiales para su almacenamiento, procesamiento y análisis. En IA, el Big Data es el combustible para entrenar modelos complejos.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Sesgo (Bias)</h2>
+      <span class="etiqueta etica">Ética y gobernanza</span>
+      <p>Incorporación de prejuicios en los datos de entrenamiento o en los algoritmos que puede producir resultados injustos o discriminatorios. El sesgo puede reflejar y amplificar desigualdades sociales existentes.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Chatbot</h2>
+      <span class="etiqueta ia-generativa">IA Generativa</span>
+      <p>Programa informático diseñado para simular conversaciones humanas mediante texto o voz. Los chatbots modernos basados en LLMs como ChatGPT o Claude pueden responder preguntas académicas, redactar textos y asistir en investigación.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Citación del uso de IA</h2>
+      <span class="etiqueta uso-academico">Uso Académico</span>
+      <p>Práctica académica de declarar explícitamente qué herramientas de IA se utilizaron, con qué propósito y en qué fase del trabajo se implementó, garantizando transparencia e integridad académica.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Computación en la nube (Cloud Computing)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Modelo de entrega de servicios informáticos (servidores, almacenamiento, software) a través de Internet. En IA, permite acceder a capacidad de procesamiento necesaria para entrenar modelos sin infraestructura local.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Computer Vision (Visión computacional)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Campo de la IA que permite a las máquinas interpretar y procesar información visual del mundo (imágenes y videos), con aplicaciones en diagnóstico médico, reconocimiento facial y vehículos autónomos.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Datos (Data)</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Componente esencial de todos los proyectos de aprendizaje automático e IA. Los datos son la materia prima con la que se entrenan, prueban y validan los modelos de inteligencia artificial.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Datos estructurados</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Datos organizados en formatos claramente definidos como tablas o bases de datos relacionales. Son más fáciles de analizar y son esenciales para tareas como análisis financiero o seguimiento académico.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Datos no estructurados</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Datos como texto libre, imágenes, audio o video que no tienen una organización predefinida. Representan la mayoría de los datos disponibles y su análisis requiere técnicas avanzadas de IA.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Datos de entrenamiento (Training Data)</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Conjunto de información que se utiliza para enseñar a un sistema de IA a reconocer patrones, aprender y generar respuestas o resultados. Pueden incluir textos, imágenes, audios, videos o números, dependiendo de la función para la que fue creada la IA.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Detección de plagio con IA</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Uso de herramientas de inteligencia artificial para detectar similitudes entre textos académicos y posibles contenidos generados por IA. Aunque existen opciones gratuitas, sus resultados no son totalmente precisos y deben complementarse con revisión humana, especialmente en contextos académicos.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Ética de la IA (AI Ethics)</h2>
+      <span class="etiqueta etica">Ética y Gobernanza</span>
+      <p>Conjunto de principios y normas que buscan garantizar que la inteligencia artificial se use de manera responsable, justa, segura y transparente, respetando los derechos y el bienestar de las personas. <a href="https://www.unesco.org/es/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener noreferrer">Más información aquí.</a></p>
+    </div>
+    <div class="tarjeta">
+      <h2>Explicabilidad (IA explicable / XAI)</h2>
+      <span class="etiqueta etica">Ética y Gobernanza</span>
+      <p>Capacidad de un sistema de IA para hacer comprensible y comunicar de manera clara cómo y por qué llega a sus decisiones, permitiendo que las personas entiendan los procesos y factores que influyen en sus resultados.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Evaluación de resultados de IA</h2>
+      <span class="etiqueta uso-academico">Uso Académico</span>
+      <p>Proceso crítico de valorar la exactitud, relevancia, coherencia y posibles sesgos de los contenidos generados por herramientas de IA antes de incorporarlos en trabajos académicos.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Foundation Model (Modelo base)</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Modelo de IA entrenado con enormes cantidades de datos no etiquetados que puede ser adaptado para múltiples tareas mediante ajuste fino. Ejemplos: GPT-4, Llama o Claude.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Gobernanza de IA (AI Governance)</h2>
+      <span class="etiqueta etica">Ética y Gobernanza</span>
+      <p>Desarrollo de políticas, normas y marcos regulatorios para supervisar y velar por el uso ético y responsable de la inteligencia artificial, incluyendo auditoría de algoritmos, evaluación de riesgos y cumplimiento normativo internacional. <a href="https://normograma.mintic.gov.co/mintic/compilacion/docs/CONPES_DNP_4144_2025.htm" target="_blank" rel="noopener noreferrer">Compilación Jurídica</a> | <a href="https://www.mintic.gov.co/portal/715/articles-425888_recurso_1.pdf" target="_blank" rel="noopener noreferrer">Uso responsable de IA</a></p>
+    </div>
+    <div class="tarjeta">
+      <h2>IA Generativa (Generative AI)</h2>
+      <span class="etiqueta ia-generativa">IA Generativa</span>
+      <p>Tipo de inteligencia artificial diseñada para crear contenido nuevo y original, como textos e imágenes, a partir de instrucciones o datos previos. Incluye modelos como ChatGPT, DALL-E o Midjourney, con usos crecientes en investigación, docencia y creación académica.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Inteligencia Artificial (IA)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Rama de la informática orientada a crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana: aprendizaje, razonamiento, comprensión del lenguaje, percepción visual y toma de decisiones.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Integridad académica e IA</h2>
+      <span class="etiqueta uso-academico">Uso académico</span>
+      <p>Conjunto de principios que rigen el uso ético y transparente de herramientas de IA en contextos universitarios, garantizando que la autoría intelectual y el esfuerzo propio sean reconocibles y verificables.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Ingeniería de prompts (Prompt Engineering)</h2>
+      <span class="etiqueta ia-generativa">IA Generativa</span>
+      <p>Arte y técnica de diseñar instrucciones claras, específicas y contextuales para obtener resultados precisos y útiles de modelos de IA generativa. Competencia clave en la alfabetización académica digital.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Large Language Model (LLM)</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Modelos de IA entrenados con enormes corpus de texto que pueden comprender y generar lenguaje natural con alta coherencia. Capaces de redactar, resumir, traducir, razonar y responder preguntas. Ejemplos: GPT-4, Claude, Gemini.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Minería de datos (Data Mining)</h2>
+      <span class="etiqueta datos">Datos</span>
+      <p>Proceso de analizar grandes conjuntos de datos para identificar patrones, relaciones y conocimiento útil. Base de muchas aplicaciones de IA en investigación académica.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Modelo (Model)</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Representación matemática aprendida a partir de datos que un sistema de IA usa para hacer predicciones o tomar decisiones sobre nuevas entradas.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Modelo multimodal</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Modelo de IA capaz de procesar múltiples tipos de entrada: texto, imágenes, audio y video en una misma arquitectura. Permite interacciones más ricas en entornos académicos y de investigación.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Natural Language Processing (NLP)</h2>
+      <span class="etiqueta fundamentos">Fundamentos</span>
+      <p>Campo de la IA que permite a las computadoras comprender, interpretar y generar lenguaje humano. Incluye traducción automática, análisis de sentimientos, resumen de textos y comprensión lectora.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Red neuronal (Neural Network)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Sistema computacional inspirado en la estructura del cerebro humano, compuesto por capas de nodos interconectados. Es la arquitectura base del aprendizaje profundo y los modelos de lenguaje modernos.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Overfitting (Sobreajuste)</h2>
+      <span class="etiqueta aprendizaje">Aprendizaje Automático</span>
+      <p>Error en el que un modelo aprende demasiado bien los datos de entrenamiento, incluyendo el ruido, y pierde capacidad de generalizar correctamente a datos nuevos no vistos.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Plagio e IA</h2>
+      <span class="etiqueta uso-academico">Uso Académico</span>
+      <p>Riesgo académico derivado del uso no declarado o indebido de IA para generar trabajos. Se previene mediante transparencia, citación adecuada y adopción de políticas institucionales claras.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Privacidad de datos en IA</h2>
+      <span class="etiqueta etica">Ética y Gobernanza</span>
+      <p>Principio que exige proteger la información sensible utilizada para entrenar modelos de IA o generada durante su uso. Especialmente relevante en entornos universitarios que manejan datos de estudiantes e investigadores.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Procesamiento del Lenguaje Natural (PLN / NLP)</h2>
+      <span class="etiqueta ia-generativa">IA Generativa</span>
+      <p>Rama de la IA que permite a las máquinas comprender, interpretar y generar lenguaje humano. Es clave en buscadores académicos, análisis de textos, chatbots bibliotecarios y herramientas de apoyo a la escritura científica.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Prompt</h2>
+      <span class="etiqueta ia-generativa">IA Generativa</span>
+      <p>Instrucción, pregunta o contexto que se proporciona a un modelo de IA generativa para orientar su respuesta. La calidad del prompt determina en gran medida la utilidad del resultado obtenido.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>RAG (Retrieval Augmented Generation)</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Técnica que combina un modelo de lenguaje con la búsqueda en fuentes externas para generar respuestas más precisas y actualizadas. Muy útil en sistemas de búsqueda académica y asistentes de investigación.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Sesgos algorítmicos (Algorithmic Bias)</h2>
+      <span class="etiqueta etica">Ética y Gobernanza</span>
+      <p>Ocurre cuando los algoritmos incorporan o amplifican sesgos existentes en los datos o en las decisiones de diseño. Puede producir resultados discriminatorios en evaluaciones académicas, contratación o sistemas de justicia.</p>
+    </div>
+  </div>
+  <hr class="divisor">
+
+  <div class="fila">
+    <div class="tarjeta">
+      <h2>Token</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Unidad básica de procesamiento de texto en los LLMs. Puede corresponder a una palabra, parte de una palabra o un carácter. El número de tokens determina el costo y la capacidad de procesamiento de una consulta.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Transformer / Transformadores</h2>
+      <span class="etiqueta modelos">Modelos</span>
+      <p>Arquitectura de red neuronal que revolucionó el procesamiento del lenguaje natural. Es la base de modelos como GPT, BERT y Claude. Su mecanismo de atención le permite entender el contexto a larga distancia en el texto.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
