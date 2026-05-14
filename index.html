@@ -423,5 +423,15 @@
   </div>
 
 </div>
+  <script>
+  function notifyHeight() {
+    window.parent.postMessage(
+      { iframeHeight: document.body.scrollHeight },
+      '*'
+    );
+  }
+  window.addEventListener('load', notifyHeight);
+  window.addEventListener('resize', notifyHeight);
+</script>
 </body>
 </html>
