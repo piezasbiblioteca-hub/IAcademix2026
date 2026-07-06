@@ -21,6 +21,38 @@
       margin: 0 auto;
     }
 
+    .introduccion {
+  background: #ffffff;
+  border: 1px solid #e0ddd5;
+  border-left: 5px solid #00558f;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.introduccion p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.introduccion strong {
+  color: #00558f;
+}
+
+@media (max-width: 768px) {
+  .introduccion {
+    padding: 1.2rem;
+  }
+
+  .introduccion p {
+    font-size: 0.92rem;
+    text-align: left;
+  }
+}
+  
     .fila {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -101,6 +133,12 @@
 <body>
 <div class="glosario">
 
+<div class="introduccion">
+  <p>
+    <strong>IAPEDIA</strong> reúne términos y conceptos esenciales sobre inteligencia artificial aplicados a la docencia, la investigación y el aprendizaje. Un glosario pensado para aprender, explorar y comprender la IA de manera práctica y accesible.
+  </p>
+</div>
+  
   <div class="fila">
     <div class="tarjeta">
       <h2>Agente de IA (Agentic AI)</h2>
